@@ -15,8 +15,22 @@
             <p class="subtitle">Accordez votre guitare en temps réel</p>
         </header>
 
-        <!-- Main Tuner Display -->
-        <div class="tuner-display">
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="tuner">
+                <span class="tab-icon">🎵</span>
+                <span class="tab-label">Accordeur</span>
+            </button>
+            <button class="tab-btn" data-tab="videos">
+                <span class="tab-icon">📺</span>
+                <span class="tab-label">Vidéos</span>
+            </button>
+        </nav>
+
+        <!-- Tuner Section -->
+        <div id="tuner-section" class="tab-content active">
+            <!-- Main Tuner Display -->
+            <div class="tuner-display">
             <!-- Frequency Display -->
             <div class="frequency-display">
                 <div class="frequency-value" id="frequency">--</div>
@@ -99,12 +113,70 @@
             </div>
         </div>
 
-        <!-- Start/Stop Button -->
-        <div class="controls">
-            <button id="startBtn" class="btn btn-primary">
-                <span class="btn-icon">🎤</span>
-                <span class="btn-text">Démarrer l'accordeur</span>
-            </button>
+            <!-- Start/Stop Button -->
+            <div class="controls">
+                <button id="startBtn" class="btn btn-primary">
+                    <span class="btn-icon">🎤</span>
+                    <span class="btn-text">Démarrer l'accordeur</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Videos Section -->
+        <div id="videos-section" class="tab-content">
+            <!-- Filters -->
+            <div class="video-filters">
+                <div class="filter-group">
+                    <label class="filter-label">Style musical</label>
+                    <div class="filter-buttons" id="styleFilters">
+                        <button class="filter-btn active" data-filter="all">Tous</button>
+                        <button class="filter-btn" data-filter="rock">Rock</button>
+                        <button class="filter-btn" data-filter="blues">Blues</button>
+                        <button class="filter-btn" data-filter="jazz">Jazz</button>
+                        <button class="filter-btn" data-filter="metal">Metal</button>
+                        <button class="filter-btn" data-filter="classique">Classique</button>
+                        <button class="filter-btn" data-filter="folk">Folk</button>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <label class="filter-label">Rechercher un morceau</label>
+                    <input type="text" id="songSearch" class="search-input" placeholder="Nom du morceau...">
+                </div>
+            </div>
+
+            <!-- Video Player -->
+            <div class="video-player-container" id="videoPlayerContainer" style="display: none;">
+                <div class="video-player-header">
+                    <h3 id="currentVideoTitle">Titre de la vidéo</h3>
+                    <button id="closePlayer" class="close-player-btn">✕</button>
+                </div>
+                <div class="video-player-wrapper">
+                    <iframe id="videoPlayer"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <span class="video-style" id="currentVideoStyle"></span>
+                    <span class="video-artist" id="currentVideoArtist"></span>
+                </div>
+            </div>
+
+            <!-- Videos Grid -->
+            <div class="videos-grid" id="videosGrid">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">🎬</div>
+                <p class="empty-text">Aucune vidéo trouvée</p>
+                <p class="empty-subtext">Essayez un autre filtre ou terme de recherche</p>
+            </div>
         </div>
 
         <!-- Footer Info -->
@@ -115,5 +187,6 @@
     </div>
 
     <script src="tuner.js"></script>
+    <script src="videos.js"></script>
 </body>
 </html>
