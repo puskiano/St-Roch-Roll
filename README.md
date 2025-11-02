@@ -86,9 +86,27 @@ La bibliothèque inclut 20+ vidéos classées par style :
 - **Classique** - Asturias, Recuerdos de la Alhambra, Romance
 - **Folk** - Blackbird, The Boxer, Dust in the Wind
 
+### ⚠️ Important - Erreur 153 YouTube
+
+Si vous voyez **"Erreur 153"** ou **"Regarder la vidéo sur YouTube"**, cela signifie que le propriétaire de la vidéo a désactivé la lecture intégrée.
+
+**Solution** : Remplacez les IDs de vidéos par des vidéos qui autorisent l'intégration.
+
+### Comment Tester une Vidéo YouTube
+
+1. Trouvez l'ID de la vidéo : `youtube.com/watch?v=ID_ICI`
+2. Testez l'intégration : `https://www.youtube.com/embed/ID_ICI`
+3. Si la vidéo se lance ✅, elle est intégrable !
+
+**Vidéos généralement intégrables** :
+- ✅ Tutoriels de guitare (JustinGuitar, Marty Music, etc.)
+- ✅ Leçons éducatives
+- ✅ Covers amateurs
+- ❌ Clips officiels (souvent bloqués)
+
 ### Ajouter vos propres vidéos
 
-Pour ajouter des vidéos, modifiez le fichier `videos.js` :
+Modifiez le fichier `videos.js` :
 
 ```javascript
 {
@@ -101,7 +119,7 @@ Pour ajouter des vidéos, modifiez le fichier `videos.js` :
 }
 ```
 
-**Note** : L'ID YouTube se trouve dans l'URL : `youtube.com/watch?v=VIDEO_ID`
+📖 **Guide complet** : Consultez [VIDEOS_GUIDE.md](VIDEOS_GUIDE.md) pour plus d'informations
 
 ## 🔧 Technologies
 

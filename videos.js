@@ -4,19 +4,12 @@
 class VideoLibrary {
     constructor() {
         // Video Database
+        // Note: Ces vidéos sont des exemples. Remplacez les IDs par vos propres vidéos YouTube.
         this.videos = [
-            // Rock
-            {
-                id: 'dQw4w9WgXcQ',
-                title: 'Stairway to Heaven - Led Zeppelin (Guitar Solo)',
-                artist: 'Led Zeppelin',
-                style: 'rock',
-                song: 'Stairway to Heaven',
-                duration: '8:02'
-            },
+            // Rock - Tutoriels et covers
             {
                 id: 'fJ9rUzIMcZQ',
-                title: 'Bohemian Rhapsody - Queen (Guitar Cover)',
+                title: 'Bohemian Rhapsody - Queen (Guitar Tutorial)',
                 artist: 'Queen',
                 style: 'rock',
                 song: 'Bohemian Rhapsody',
@@ -24,136 +17,152 @@ class VideoLibrary {
             },
             {
                 id: '1w7OgIMMRc4',
-                title: 'Sweet Child O\' Mine - Guns N\' Roses (Tutorial)',
+                title: 'Sweet Child O\' Mine - Intro Guitar Lesson',
                 artist: 'Guns N\' Roses',
                 style: 'rock',
                 song: 'Sweet Child O\' Mine',
                 duration: '5:56'
             },
             {
-                id: 'kXYiU_JCYtU',
-                title: 'Smells Like Teen Spirit - Nirvana (Riff)',
-                artist: 'Nirvana',
+                id: 'qR7U1HIhxfA',
+                title: 'Hotel California - Guitar Solo Tutorial',
+                artist: 'Eagles',
                 style: 'rock',
-                song: 'Smells Like Teen Spirit',
-                duration: '5:01'
+                song: 'Hotel California',
+                duration: '6:30'
+            },
+            {
+                id: 'rU3aFlHD2lc',
+                title: 'Wonderwall - Oasis (Acoustic Guitar)',
+                artist: 'Oasis',
+                style: 'rock',
+                song: 'Wonderwall',
+                duration: '4:18'
             },
 
-            // Blues
+            // Blues - Leçons et performances
             {
-                id: 'KC5H9P4F5Uk',
-                title: 'The Thrill Is Gone - B.B. King',
-                artist: 'B.B. King',
+                id: '4fk2prKnYnI',
+                title: 'Blues Guitar Lesson - 12 Bar Blues',
+                artist: 'Tutorial',
                 style: 'blues',
-                song: 'The Thrill Is Gone',
-                duration: '5:25'
+                song: '12 Bar Blues',
+                duration: '10:25'
             },
             {
-                id: 'iP1NPWuTW-A',
-                title: 'Red House - Jimi Hendrix',
-                artist: 'Jimi Hendrix',
+                id: 'Fo6aKnRnBxM',
+                title: 'Pentatonic Scale - Blues Guitar',
+                artist: 'Tutorial',
                 style: 'blues',
-                song: 'Red House',
-                duration: '5:44'
+                song: 'Pentatonic Blues',
+                duration: '8:44'
             },
             {
-                id: 'rY-FJvRqK0E',
-                title: 'Texas Flood - Stevie Ray Vaughan',
-                artist: 'Stevie Ray Vaughan',
+                id: 'wJTCaVkiv6I',
+                title: 'Blues Shuffle Rhythm Guitar',
+                artist: 'Tutorial',
                 style: 'blues',
-                song: 'Texas Flood',
-                duration: '5:21'
+                song: 'Blues Shuffle',
+                duration: '7:21'
             },
 
-            // Metal
+            // Metal - Riffs et techniques
             {
-                id: 'NOjG5usM-Bc',
-                title: 'Master of Puppets - Metallica',
+                id: 'xnKhsTXoKCI',
+                title: 'Metallica - Enter Sandman (Guitar Tutorial)',
                 artist: 'Metallica',
                 style: 'metal',
-                song: 'Master of Puppets',
-                duration: '8:35'
+                song: 'Enter Sandman',
+                duration: '5:32'
             },
             {
-                id: 'CD-E-LDc384',
-                title: 'Crazy Train - Ozzy Osbourne (Solo)',
-                artist: 'Ozzy Osbourne',
+                id: 'hF_-5pZ_kxY',
+                title: 'AC/DC - Back in Black (Riff Tutorial)',
+                artist: 'AC/DC',
                 style: 'metal',
-                song: 'Crazy Train',
+                song: 'Back in Black',
                 duration: '4:53'
             },
             {
-                id: 'PXhKr0YRgVc',
-                title: 'Eruption - Van Halen',
-                artist: 'Van Halen',
+                id: 'L_XJ_s5IsQc',
+                title: 'Power Chords - Metal Guitar Basics',
+                artist: 'Tutorial',
                 style: 'metal',
-                song: 'Eruption',
-                duration: '1:42'
+                song: 'Power Chords',
+                duration: '6:15'
             },
 
-            // Jazz
+            // Jazz - Standards et techniques
             {
-                id: 'E0WBwChJ_Uc',
+                id: 'vmDDOFXSgAs',
+                title: 'Jazz Guitar Chords - Beautiful Voicings',
+                artist: 'Tutorial',
+                style: 'jazz',
+                song: 'Jazz Chords',
+                duration: '9:32'
+            },
+            {
+                id: 'nPGA3vjMLgE',
                 title: 'Autumn Leaves - Jazz Guitar',
-                artist: 'Various',
+                artist: 'Tutorial',
                 style: 'jazz',
                 song: 'Autumn Leaves',
-                duration: '4:32'
+                duration: '12:18'
             },
             {
-                id: 'w1rZSIVqRwc',
-                title: 'All Blues - Miles Davis (Guitar)',
-                artist: 'Miles Davis',
+                id: 'k9aF_CxCSro',
+                title: 'Jazz Blues Comping - Rhythm Guitar',
+                artist: 'Tutorial',
                 style: 'jazz',
-                song: 'All Blues',
-                duration: '11:33'
-            },
-            {
-                id: 'kEhRy2ax8mw',
-                title: 'Round Midnight - Jazz Guitar Solo',
-                artist: 'Thelonious Monk',
-                style: 'jazz',
-                song: 'Round Midnight',
-                duration: '5:45'
+                song: 'Jazz Blues',
+                duration: '8:45'
             },
 
-            // Classique
+            // Classique - Pièces célèbres
             {
                 id: 'oEfFbuT3YXY',
-                title: 'Asturias - Isaac Albéniz',
+                title: 'Asturias (Leyenda) - Isaac Albéniz',
                 artist: 'Isaac Albéniz',
                 style: 'classique',
                 song: 'Asturias',
                 duration: '6:42'
             },
             {
-                id: '2CtpVvWZewo',
-                title: 'Recuerdos de la Alhambra - Francisco Tárrega',
-                artist: 'Francisco Tárrega',
+                id: 'FExCt7JKTS8',
+                title: 'Classical Guitar Lesson - Beginner',
+                artist: 'Tutorial',
                 style: 'classique',
-                song: 'Recuerdos de la Alhambra',
-                duration: '4:28'
+                song: 'Classical Basics',
+                duration: '10:28'
             },
             {
-                id: 'YeKcOJJq4j4',
-                title: 'Romance Anónimo - Guitare Classique',
-                artist: 'Anonyme',
+                id: 'V6fHTyVmJJ4',
+                title: 'Cavatina - Classical Guitar',
+                artist: 'Stanley Myers',
                 style: 'classique',
-                song: 'Romance',
-                duration: '3:15'
+                song: 'Cavatina',
+                duration: '3:45'
             },
 
-            // Folk
+            // Folk - Fingerstyle et acoustique
             {
-                id: 'eHnGwDy2y6s',
-                title: 'Blackbird - The Beatles',
-                artist: 'The Beatles',
+                id: 'JsD6uEZsIsU',
+                title: 'Fingerstyle Guitar - Tutorial Débutant',
+                artist: 'Tutorial',
                 style: 'folk',
-                song: 'Blackbird',
-                duration: '2:18'
+                song: 'Fingerstyle Basics',
+                duration: '11:18'
             },
             {
-                id: 'ktvTqknDobU',
+                id: 'YQlyHbu0zz4',
+                title: 'Dust in the Wind - Kansas (Tutorial)',
+                artist: 'Kansas',
+                style: 'folk',
+                song: 'Dust in the Wind',
+                duration: '8:28'
+            },
+            {
+                id: 'Sf-_1ډգOA',
                 title: 'The Boxer - Simon & Garfunkel',
                 artist: 'Simon & Garfunkel',
                 style: 'folk',
@@ -161,12 +170,12 @@ class VideoLibrary {
                 duration: '5:08'
             },
             {
-                id: 'iY4LFNxJSZ0',
-                title: 'Dust in the Wind - Kansas',
-                artist: 'Kansas',
+                id: 'f7McpVPlidc',
+                title: 'Acoustic Fingerpicking Patterns',
+                artist: 'Tutorial',
                 style: 'folk',
-                song: 'Dust in the Wind',
-                duration: '3:28'
+                song: 'Fingerpicking',
+                duration: '9:45'
             }
         ];
 
