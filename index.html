@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Accordeur de Guitare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>🎸 Accordeur Guitare</h1>
+            <p class="subtitle">Accordez votre guitare en temps réel</p>
+        </header>
+
+        <!-- Main Tuner Display -->
+        <div class="tuner-display">
+            <!-- Frequency Display -->
+            <div class="frequency-display">
+                <div class="frequency-value" id="frequency">--</div>
+                <div class="frequency-unit">Hz</div>
+            </div>
+
+            <!-- Note Display -->
+            <div class="note-display">
+                <div class="note-name" id="note">-</div>
+                <div class="octave" id="octave">-</div>
+            </div>
+
+            <!-- Cents Display (how far off) -->
+            <div class="cents-display">
+                <div class="cents-value" id="cents">0</div>
+                <div class="cents-label">cents</div>
+            </div>
+
+            <!-- Visual Tuning Indicator -->
+            <div class="tuning-meter">
+                <div class="meter-marks">
+                    <span class="mark">-50</span>
+                    <span class="mark">-25</span>
+                    <span class="mark center">0</span>
+                    <span class="mark">+25</span>
+                    <span class="mark">+50</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill" id="meterFill"></div>
+                    <div class="meter-needle" id="needle"></div>
+                </div>
+                <div class="meter-zones">
+                    <div class="zone too-low"></div>
+                    <div class="zone perfect"></div>
+                    <div class="zone too-high"></div>
+                </div>
+            </div>
+
+            <!-- Status Indicator -->
+            <div class="status-indicator" id="status">
+                <div class="status-icon">⚡</div>
+                <div class="status-text">Prêt à accorder</div>
+            </div>
+        </div>
+
+        <!-- Guitar Strings Reference -->
+        <div class="strings-reference">
+            <h3>Notes de référence</h3>
+            <div class="strings-grid">
+                <div class="string-item" data-note="E" data-freq="82.41">
+                    <div class="string-number">6</div>
+                    <div class="string-note">E</div>
+                    <div class="string-freq">82.4 Hz</div>
+                </div>
+                <div class="string-item" data-note="A" data-freq="110.00">
+                    <div class="string-number">5</div>
+                    <div class="string-note">A</div>
+                    <div class="string-freq">110.0 Hz</div>
+                </div>
+                <div class="string-item" data-note="D" data-freq="146.83">
+                    <div class="string-number">4</div>
+                    <div class="string-note">D</div>
+                    <div class="string-freq">146.8 Hz</div>
+                </div>
+                <div class="string-item" data-note="G" data-freq="196.00">
+                    <div class="string-number">3</div>
+                    <div class="string-note">G</div>
+                    <div class="string-freq">196.0 Hz</div>
+                </div>
+                <div class="string-item" data-note="B" data-freq="246.94">
+                    <div class="string-number">2</div>
+                    <div class="string-note">B</div>
+                    <div class="string-freq">246.9 Hz</div>
+                </div>
+                <div class="string-item" data-note="E" data-freq="329.63">
+                    <div class="string-number">1</div>
+                    <div class="string-note">E</div>
+                    <div class="string-freq">329.6 Hz</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start/Stop Button -->
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">
+                <span class="btn-icon">🎤</span>
+                <span class="btn-text">Démarrer l'accordeur</span>
+            </button>
+        </div>
+
+        <!-- Footer Info -->
+        <footer>
+            <p class="info-text">🎵 Jouez une corde pour voir la note détectée</p>
+            <p class="tip-text">Astuce: Accordez dans un environnement calme pour de meilleurs résultats</p>
+        </footer>
+    </div>
+
+    <script src="tuner.js"></script>
+</body>
+</html>
