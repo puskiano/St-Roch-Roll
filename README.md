@@ -1,9 +1,10 @@
 # 🎸 Accordeur de Guitare Web
 
-Application web mobile pour accorder votre guitare en temps réel avec une interface graphique moderne et intuitive.
+Application web mobile complète pour guitaristes : accordeur en temps réel + bibliothèque de vidéos YouTube intégrée.
 
 ## ✨ Fonctionnalités
 
+### 🎵 Accordeur
 - **Détection de pitch en temps réel** - Utilise l'API Web Audio pour détecter la fréquence des notes
 - **Interface ultra graphique** - Design moderne avec animations et effets visuels
 - **Optimisé mobile** - Responsive design parfait pour smartphones
@@ -11,6 +12,14 @@ Application web mobile pour accorder votre guitare en temps réel avec une inter
 - **Référence des cordes** - Affiche les 6 cordes standard (E-A-D-G-B-E)
 - **Précision en cents** - Affiche la différence en cents (1/100 de demi-ton)
 - **Sons de référence** - Cliquez sur une corde pour entendre la note cible
+
+### 📺 Bibliothèque de Vidéos
+- **20+ vidéos YouTube intégrées** - Tutoriels et morceaux de guitare
+- **Filtrage par style** - Rock, Blues, Jazz, Metal, Classique, Folk
+- **Recherche intelligente** - Par morceau, artiste ou titre
+- **Lecteur intégré** - Regardez sans quitter l'application
+- **Interface cohérente** - Design moderne et responsive
+- **Miniatures animées** - Prévisualisation avec durée
 
 ## 🚀 Installation
 
@@ -37,13 +46,23 @@ npx serve
 
 ## 📱 Utilisation
 
-1. **Autoriser le microphone** - Votre navigateur demandera l'accès au micro
-2. **Cliquer sur "Démarrer l'accordeur"** - Active la détection audio
-3. **Jouer une corde** - L'application détecte automatiquement la note
-4. **Accorder** - Suivez l'aiguille et les indications:
+### Accordeur
+1. **Cliquer sur l'onglet "Accordeur"** (🎵)
+2. **Autoriser le microphone** - Votre navigateur demandera l'accès au micro
+3. **Cliquer sur "Démarrer l'accordeur"** - Active la détection audio
+4. **Jouer une corde** - L'application détecte automatiquement la note
+5. **Accorder** - Suivez l'aiguille et les indications:
    - ⬇️ **Trop bas** - Tendez la corde
    - ✅ **Parfait** - La corde est accordée (±5 cents)
    - ⬆️ **Trop haut** - Détendez la corde
+
+### Vidéos
+1. **Cliquer sur l'onglet "Vidéos"** (📺)
+2. **Filtrer par style** - Sélectionnez Rock, Blues, Jazz, etc.
+3. **Rechercher** - Tapez le nom d'un morceau, artiste ou titre
+4. **Cliquer sur une vidéo** - Le lecteur YouTube s'ouvre dans l'application
+5. **Regarder** - La vidéo se lance automatiquement
+6. **Fermer** - Cliquez sur le ✕ pour revenir à la galerie
 
 ## 🎯 Accordage Standard
 
@@ -56,6 +75,34 @@ npx serve
 | 2 | B | 246.9 Hz |
 | 1 (aiguë) | E | 329.6 Hz |
 
+## 🎬 Vidéos Disponibles
+
+La bibliothèque inclut 20+ vidéos classées par style :
+
+- **Rock** - Stairway to Heaven, Bohemian Rhapsody, Sweet Child O' Mine, etc.
+- **Blues** - The Thrill Is Gone, Red House, Texas Flood
+- **Metal** - Master of Puppets, Crazy Train, Eruption
+- **Jazz** - Autumn Leaves, All Blues, Round Midnight
+- **Classique** - Asturias, Recuerdos de la Alhambra, Romance
+- **Folk** - Blackbird, The Boxer, Dust in the Wind
+
+### Ajouter vos propres vidéos
+
+Pour ajouter des vidéos, modifiez le fichier `videos.js` :
+
+```javascript
+{
+    id: 'VIDEO_ID_YOUTUBE',  // ID de la vidéo YouTube
+    title: 'Titre de la vidéo',
+    artist: 'Artiste',
+    style: 'rock',  // rock, blues, jazz, metal, classique, folk
+    song: 'Nom du morceau',
+    duration: '4:32'
+}
+```
+
+**Note** : L'ID YouTube se trouve dans l'URL : `youtube.com/watch?v=VIDEO_ID`
+
 ## 🔧 Technologies
 
 - **HTML5** - Structure sémantique
@@ -63,6 +110,7 @@ npx serve
 - **JavaScript ES6+** - Logique applicative
 - **Web Audio API** - Capture et analyse audio
 - **Autocorrelation** - Algorithme de détection de pitch
+- **YouTube Iframe API** - Intégration vidéos YouTube
 
 ## 💡 Conseils
 
